@@ -1,3 +1,2 @@
 # xorg-server-xlibre-void
-#### An A void linux package for xorg-xlibre
-
+#### A void linux package template for xorg-xlibre
