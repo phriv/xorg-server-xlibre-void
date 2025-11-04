@@ -64,7 +64,7 @@ post_install() {
 	find "${DESTDIR}"/usr/share/man -type f -iname '*[1-5].gz' -exec gunzip '{}' \;
 }
 
-xorg-server-xnest_package() {
+xlibre-server-xnest_package() {
 	short_desc="Nested X server that runs as an X application"
 	pkg_install() {
 		vmove usr/bin/Xnest
@@ -72,7 +72,7 @@ xorg-server-xnest_package() {
 	}
 }
 
-xorg-server-xephyr_package() {
+xlibre-server-xephyr_package() {
 	short_desc="X server outputting to a window on a pre-existing X display"
 	pkg_install() {
 		vmove usr/bin/Xephyr
@@ -80,7 +80,7 @@ xorg-server-xephyr_package() {
 	}
 }
 
-xorg-server-xvfb_package() {
+xlibre-server-xvfb_package() {
 	short_desc="Virtual framebuffer X server"
 	depends="xkeyboard-config"
 	pkg_install() {
@@ -89,14 +89,14 @@ xorg-server-xvfb_package() {
 	}
 }
 
-xorg-server-common_package() {
+xlibre-server-common_package() {
 	short_desc+="- common files"
 	pkg_install() {
 		vmove usr/lib/xorg/protocol.txt
 	}
 }
 
-xorg-server-devel_package() {
+xlibre-server-devel_package() {
 	depends="${makedepends}"
 	short_desc+=" - development files"
 	pkg_install() {
