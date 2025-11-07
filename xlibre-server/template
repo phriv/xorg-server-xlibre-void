@@ -30,8 +30,9 @@ checksum=ee53444d96db76c8c1e1e6ee86c54050c9c00e6066f8b8fac4819ce92369a49f
 lib32disabled=yes
 provides="xserver-abi-extension-10_1 xserver-abi-input-24_1
  xserver-abi-video-25_1 xf86-video-modesetting-1_1"
-replaces="xf86-video-modesetting>=0 glamor-egl>=0 xorg-server"
+replaces="xf86-video-modesetting>=0 glamor-egl>=0"
 conf_files="/etc/X11/Xwrapper.config"
+conflicts="xorg-server"
 
 build_options="elogind"
 desc_option_elogind="Rootless Xorg support with elogind"
