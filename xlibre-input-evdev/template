@@ -1,0 +1,29 @@
+# Template file for 'xf86-input-evdev'
+pkgname=xlibre-input-evdev
+version=2.11.0.2
+revision=1
+build_style=gnu-configure
+hostmakedepends="pkg-config"
+makedepends="xlibre-server-devel mtdev-devel libevdev-devel"
+depends="virtual?xserver-abi-input-24_1"
+short_desc="Xorg event device input driver"
+maintainer="Phriv"
+license="MIT"
+homepage="http://xorg.freedesktop.org/" #TODO
+distfiles="https://github.com/X11Libre/xf86-input-evdev/archive/refs/tags/xlibre-xf86-input-evdev-${version}.tar.gz" #TODO
+checksum=70a8a65ec56cce7057b8491f68744c6883debe8750948bb290ae7b1c3ec28dfc
+lib32disabled=yes
+
+post_install() {
+	vlicense COPYING
+}
+
+xlibre-input-evdev-devel_package() {
+	lib32disabled=yes
+	depends="xlibre-server-devel ${sourcepkg}>=${version}_${revision}"
+	short_desc+=" - development files"
+	pkg_install() {
+		vmove usr/include
+		vmove usr/lib/pkgconfig
+	}
+}
