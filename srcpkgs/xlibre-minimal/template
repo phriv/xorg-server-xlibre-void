@@ -1,0 +1,12 @@
+# Template file for 'xlibre-minimal'
+pkgname=xlibre-minimal
+version=1
+revision=1
+metapackage=yes
+depends="xlibre-server xauth xinit xlibre-input-libinput xlibre-input-evdev"
+short_desc="Xlibre meta-package including xlibre-xserver and needed tools"
+homepage="x11libre.net"
+license="MIT"
+conflicts="xorg-minimal"
+replaces="xlibre-minimal"
+maintainer="Phriv"
